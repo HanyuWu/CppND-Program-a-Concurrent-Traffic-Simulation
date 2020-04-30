@@ -42,7 +42,7 @@ void TrafficLight::waitForGreen() {
   // std::this_thread::sleep_for(std::chrono::milliseconds(1));
   while (true) {
     auto _msg = _messages.receive();
-    if (msg == green) {
+    if (_msg == green) {
       return;
     }
   }
